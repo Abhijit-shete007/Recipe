@@ -14,6 +14,29 @@ import Main from "../components/main/Main";
 import Body from "../components/body/Body";
 
 export default function Home() {
+  const recipes = [
+    {
+      image: recipe1,
+      title: "Avocado, and Tomato Salad",
+      kitchen: "Dona's Kitchen",
+    },
+    {
+      image: recipe2,
+      title: "Chickpea & Nutternut Squash Salad",
+      kitchen: "Tasty Treat",
+    },
+    {
+      image: recipe3,
+      title: "Spicy Chicken & Salad",
+      kitchen: "Yummy Food",
+    },
+    {
+      image: recipe4,
+      title: "Chips, Avacado Creamy Sause",
+      kitchen: "Ella Olsson",
+    },
+  ];
+
   return (
     <Body>
       <Container>
@@ -25,26 +48,13 @@ export default function Home() {
           <Hero />
 
           <Recipes>
-            <Recipe
-              image={recipe1}
-              title="Avocado and Tomato"
-              kitchen="Dona's Kitchen"
-            />
-            <Recipe
-              image={recipe2}
-              title="Avocado and Tomato"
-              kitchen="Dona's Kitchen"
-            />
-            <Recipe
-              image={recipe3}
-              title="Avocado and Tomato3"
-              kitchen="Dona's Kitchen"
-            />
-            <Recipe
-              image={recipe4}
-              title="Avocado and Tomato"
-              kitchen="Dona's Kitchen"
-            />
+            {recipes.map((recipe) => (
+              <Recipe
+                image={recipe.image}
+                title={recipe.title}
+                kitchen={recipe.kitchen}
+              />
+            ))}
           </Recipes>
         </Main>
 
