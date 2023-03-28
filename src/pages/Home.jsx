@@ -11,7 +11,6 @@ import Search from "../components/search/Search";
 import Recipe from "../components/recipe/Recipe";
 import Footer from "../components/footer/Footer";
 import Main from "../components/main/Main";
-import Body from "../components/body/Body";
 
 export default function Home() {
   const recipes = [
@@ -38,7 +37,7 @@ export default function Home() {
   ];
 
   return (
-    <Body>
+    <body>
       <Container>
         <Header />
 
@@ -60,6 +59,6 @@ export default function Home() {
 
         <Footer />
       </Container>
-    </Body>
+    </body>
   );
 }
